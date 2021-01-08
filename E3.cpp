@@ -3,24 +3,12 @@ int main()
 { 
 char a[100000];
 int i=0;
+int x=0;
 	while(scanf("%c",&a[i]),a[i]!='\n')
 	i++;
-	int x=0;
-		while((a[x]<='Z'&&a[x]>='A')||(a[x]>='a'&&a[x]<='z'))
-	x++;
-	char b[100000];
-	for(int f=0;f<x;f++)
-	{b[f]=a[f];
-	}
-		int c;
-	c=0;
-	for(int o=0;o<x;o++)
-	{
-	a[o]=b[x-1-c];
-		c++;}
 	while(1)
 	{
-	while(a[x]>'z'||a[x]<'a')
+	while(a[x]<'A'||(a[x]>'Z'&&a[x]<'a')||a[x]>'z')
 	x++;
 	int m=x;
 	while((a[m]<='Z'&&a[m]>='A')||(a[m]>='a'&&a[m]<='z'))
